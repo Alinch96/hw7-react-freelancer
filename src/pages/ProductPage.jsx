@@ -1,10 +1,10 @@
-
 import useFetch from '../hooks/useFetch';
 import apiRoutes from '../api/apiRoutes';
 import {useLocation, useNavigate, useParams } from 'react-router';
 import NotFoundPage from './NotFoundPage';
 import Loader from '../components/Loader/Loader';
 import ErrorMessage from '../components/ErrorMessage/ErrorMessage';
+import styles from './ProductPage.module.css';
   const validCategories = ['televisions', 'notebooks', 'smartphones', 'monitors'];
 
 const ProductPage = () => {
@@ -16,17 +16,19 @@ const ProductPage = () => {
     const navigate = useNavigate();
     if(!isCategoryValid) return <NotFoundPage/>
   return (
-    <section>
-      <button onClick={() => navigate(state?.from)}>Назад</button>
+    <section className={styles.productSection}>
+      <button onClick={() => navigate(state?.from)} className={styles.backButton}>Назад</button>
       {isLoading && <Loader />}
       {error && <ErrorMessage message={error} />}
       {product && (
         
-              <div>
-                <h3>{product.name}</h3>
-                <img src={product.imageUrl} alt={product.name} />
-                <p>{product.price}</p>
+              <div className={styles.productDetails}>
+                <img src={product.imageUrl} alt={product.name} className={styles.productImage} />
+                <div className={styles.productInfo}>
+                  <h3 className={styles.productTitle}>{product.name}</h3>
+                  <p className={styles.productPrice}>{product.price} грн</p>
                 </div>
+              </div>
           
           )}
     </section>

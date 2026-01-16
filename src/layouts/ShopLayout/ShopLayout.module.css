@@ -1,0 +1,27 @@
+.shopLayout {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: flex-start;
+}
+
+.aside {
+  flex-shrink: 0;
+  width: 200px;
+  position: sticky;
+  top: var(--spacing-lg);
+}
+
+.content {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .shopLayout {
+    flex-direction: column;
+  }
+  
+  .aside {
+    width: 100%;
+    position: static;
+  }
+}
