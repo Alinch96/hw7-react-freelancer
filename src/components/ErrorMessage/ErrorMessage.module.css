@@ -1,0 +1,20 @@
+.errorMessage {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: #fee;
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-md);
+  color: var(--color-error);
+  font-weight: 500;
+  margin: var(--spacing-lg) 0;
+}
+
+.errorIcon {
+  font-size: var(--font-size-xl);
+}
+
+.errorText {
+  flex: 1;
+}

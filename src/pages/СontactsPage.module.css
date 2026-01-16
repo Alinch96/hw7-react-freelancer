@@ -1,0 +1,37 @@
+.contactsPage {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--spacing-xl);
+}
+
+.title {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.contactInfo {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.infoText {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  padding: var(--spacing-sm) 0;
+}
+
+.farewell {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+  text-align: center;
+  margin-top: var(--spacing-md);
+}

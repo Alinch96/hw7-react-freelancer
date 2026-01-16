@@ -2,31 +2,46 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding: 8px 0;
-  margin-bottom: 16px;
-  border-bottom: 1px solid black;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) 0;
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--color-border);
 }
 
 .navList {
   display: flex;
   flex-direction: column;
+  gap: var(--spacing-xs);
 }
 
 .logo {
   font-weight: 700;
   margin: 0;
+  color: var(--color-text-primary);
 }
 
 .link {
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
   text-decoration: none;
-  color: black;
+  color: var(--color-text-primary);
   font-weight: 500;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.link:hover {
+  background-color: var(--color-background);
+  color: var(--color-primary);
 }
 
 .active {
   color: white;
-  background-color: orangered;
+  background-color: var(--color-primary);
 }
+
+.active:hover {
+  background-color: var(--color-primary-dark);
+  color: white;
+}
+
