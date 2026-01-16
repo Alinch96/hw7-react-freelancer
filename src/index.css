@@ -19,6 +19,7 @@ body {
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
+ aspect-ratio: 1;
 }
 
 input, button, textarea, select {
@@ -64,6 +65,7 @@ ul, ol {
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
   --spacing-2xl: 3rem;
+  --spacing-3xl: 6rem;
   
   /* Typography */
   --font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;

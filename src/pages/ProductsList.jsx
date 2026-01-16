@@ -4,6 +4,7 @@ import apiRoutes from "../api/apiRoutes";
 import { useMemo } from "react";
 import Loader from "../components/Loader/Loader";
 import styles from './ProductList.module.css';
+import clsx from "clsx";
 
 const ProductsList = () => {
   const location = useLocation();
@@ -25,7 +26,7 @@ const ProductsList = () => {
               <Link to={product.id} state={{ from: location.pathname, replace: true }} className={styles.productLink}>
               <div className={styles.productCard}>
                 <img src={product.imageUrl} alt={product.name} className={styles.productImage} />
-                <h3 className={styles.productName}>{product.name}</h3>
+                <h3 className={clsx(styles.productName, styles.multilineTruncate)}>{product.name}</h3>
                 </div></Link>
             </li>
           ))}

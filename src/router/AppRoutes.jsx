@@ -17,8 +17,8 @@ const AppRoutes = () => {
         <Route path="shop" element={<ShopLayout />}>
           <Route path="televisions" element={<ProductsList />} />
           <Route path="notebooks" element={<ProductsList />} />
-          <Route path="smartphones" element={<ProductsList category="smartphones" />} />
-          <Route path="monitors" element={<ProductsList category="monitors" />} />
+          <Route path="smartphones" element={<ProductsList/>} />
+          <Route path="monitors" element={<ProductsList/>} />
         </Route>
         <Route path="shop/:category/:id" element={<ProductPage />} />
         <Route path="payment" element={<PaymentPage />} />

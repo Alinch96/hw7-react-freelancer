@@ -1,14 +1,14 @@
 .shopLayout {
   display: flex;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-x2);
   align-items: flex-start;
 }
 
 .aside {
   flex-shrink: 0;
-  width: 200px;
+  width: 300px;
   position: sticky;
-  top: var(--spacing-lg);
+  top: var(--spacing-3xl);
 }
 
 .content {
