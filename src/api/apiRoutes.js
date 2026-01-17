@@ -1,4 +1,4 @@
-const backendUrl = 'http://localhost:5000/api'
+const backendUrl = 'https://simple-backend-hw7.onrender.com/api';
 
 export default {
   productsList: `${backendUrl}/products`,
